@@ -3,7 +3,7 @@
 <suite name="Default Suite" parallel="methods" thread-count="4">
     <test name="WebDriver6_Demo">
         <classes>
-            <class name="com.demo.day1.AssertTest">
+            <class name="com.demo.day4.DateProvideTest">
             </class>
         </classes>
     </test>
