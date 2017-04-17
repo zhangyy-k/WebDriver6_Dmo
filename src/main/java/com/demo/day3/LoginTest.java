@@ -26,6 +26,7 @@ public class LoginTest extends BaseCase {
         webDriver.manage().window().maximize();
         //把控制权交给注册按钮所在的iframe
         this.login("yuxuan110400","sensy198682");
+        Thread.sleep(3000);
         boolean b = webDriver.findElement(By.linkText("退出")).isDisplayed();
         Assert.assertTrue(b);
     }
