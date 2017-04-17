@@ -3,6 +3,9 @@ package com.demo.day3;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import ru.yandex.qatools.allure.annotations.Issue;
+import ru.yandex.qatools.allure.annotations.TestCaseId;
+import ru.yandex.qatools.allure.annotations.Title;
 
 /**
  * Created by Administrator on 2017-4-11.
@@ -15,6 +18,9 @@ public class LoginTest extends BaseCase {
      * 正确登录
      */
     @Test
+    @Issue("登录成功bug_id")
+    @TestCaseId("登录成功id")
+    @Title("登录成功title")
     public void loginTest() throws InterruptedException {
         webDriver.get("http://mail.163.com/");
         webDriver.manage().window().maximize();
@@ -30,6 +36,9 @@ public class LoginTest extends BaseCase {
      * 账号正确，密码错误
      */
     @Test
+    @Issue("登录失败bug_id")
+    @TestCaseId("登录失败id")
+    @Title("登录失败title")
     public void loginFailTest(){
         webDriver.get("http://mail.163.com/");
         webDriver.manage().window().maximize();
