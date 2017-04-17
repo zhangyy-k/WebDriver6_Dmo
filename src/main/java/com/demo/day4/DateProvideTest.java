@@ -5,6 +5,9 @@ import com.demo.day3.LoginTest;
 import org.openqa.selenium.By;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+import ru.yandex.qatools.allure.annotations.Issue;
+import ru.yandex.qatools.allure.annotations.TestCaseId;
+import ru.yandex.qatools.allure.annotations.Title;
 
 /**
  * Created by Administrator on 2017-4-12.
@@ -22,6 +25,9 @@ public class DateProvideTest extends BaseCase {
     }
 
     @Test(dataProvider = "USERINFO")
+    @Issue("登录bug_id")
+    @TestCaseId("测试用例id")
+    @Title("登录title")
     public void loginTest(String userName,String passWord){
         webDriver.get("http://mail.163.com");
         webDriver.manage().window().maximize();
